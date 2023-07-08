@@ -31,13 +31,18 @@ const PORT = process.env.PORT;
 const CONNECTION =process.env.MONGODB_CONNECTION;
 mongoose
   .connect(CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(PORT, () => console.log(`Listening at Port ${PORT}`)))
+  .then(() => {console.log("Database Connected!!!")})
   .catch((error) => console.log(`${error} did not connect`));
 
-
+app.get('/', (req,res)=>{res.send("welcome!!")})
 app.use('/auth', AuthRoute);
 app.use('/user', UserRoute)
 app.use('/posts', PostRoute)
 app.use('/upload', UploadRoute)
 app.use('/chat', ChatRoute)
 app.use('/message', MessageRoute)
+
+
+app.listen(PORT, () => {
+  console.log(`Listening at Port http://localhost:${PORT}`)
+})
