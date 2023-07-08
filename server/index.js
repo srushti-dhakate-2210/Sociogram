@@ -21,7 +21,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.use(cors({
-    origin: 'https://sociogram-xyz.vercel.app/',
+    origin: 'https://sociogram-xyz.vercel.app',
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 
