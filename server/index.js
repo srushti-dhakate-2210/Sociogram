@@ -35,6 +35,7 @@ mongoose
   .catch((error) => console.log(`${error} did not connect`));
 
 app.get('/', (req,res)=>{res.send("welcome!!")})
+app.get('/demo', (req,res)=>{res.send("demo!!")})
 app.use('/auth', AuthRoute);
 app.use('/user', UserRoute)
 app.use('/posts', PostRoute)
