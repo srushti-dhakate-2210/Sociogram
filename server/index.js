@@ -21,7 +21,8 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.use(cors({
-    origin: '*'
+    origin: 'https://sociogram-g571.vercel.app',
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 
 // to serve images inside public folder
