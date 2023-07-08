@@ -50,5 +50,5 @@ app.use('/message', MessageRoute)
 
 
 app.listen(PORT, () => {
-  console.log(`Listening at Port http://localhost:${PORT}`)
+  console.log(`Listening at http://localhost:${PORT}`)
 })
